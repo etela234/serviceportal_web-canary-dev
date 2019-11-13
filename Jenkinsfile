@@ -1,4 +1,5 @@
-node { 
+node {
+    tool name: 'node', type: 'nodejs'
     stage 'Check Out Code Repository'
         checkout scm
     stage 'build prject'
