@@ -4,10 +4,16 @@ pipeline {
   tools {nodejs "node"}
  
   stages {
-    stage('Example') {
+    stage('Init') {
       steps {
         sh 'npm config ls'
       }
+    }
+    stage('Check Out Code Repository') {
+      checkout scm
+    }
+    stage('Build Project') {
+        sh 'npm install'
     }
   }
 }
