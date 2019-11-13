@@ -1,5 +1,4 @@
 node {
-    agent any
     tool name: 'node', type: 'nodejs'
     stage 'Check Out Code Repository'
         checkout scm
