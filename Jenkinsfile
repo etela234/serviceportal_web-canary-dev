@@ -10,10 +10,14 @@ pipeline {
       }
     }
     stage('Check Out Code Repository') {
-      checkout scm
+        steps {
+          checkout scm
+        }
     }
     stage('Build Project') {
-        sh 'npm install'
+        steps {
+          sh 'npm install'
+        }
     }
   }
 }
