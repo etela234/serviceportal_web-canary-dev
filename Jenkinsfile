@@ -30,5 +30,8 @@ pipeline {
           sh 'npm build'
         }
       }
+     stage 'deploy app to node'
+        ansiblePlaybook(inventory: 'home/ubuntu/playbooks/inventory.ini', playbook: 'home/ubuntu/playbooks/playbook.yml')     
+ 
   }
 }
