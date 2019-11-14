@@ -26,6 +26,7 @@ pipeline {
         steps {
           sh "echo $PATH"
           sh 'npm build'
+        }
       }
   }
 }
