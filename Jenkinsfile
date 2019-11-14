@@ -17,6 +17,15 @@ pipeline {
           sh "echo $PATH"
           sh 'npm install'
         }
+      stage('Build Project') {
+        steps {
+          sh "echo $PATH"
+          sh 'npm run serve'
     }
+        stage('Build Project') {
+        steps {
+          sh "echo $PATH"
+          sh 'npm build'
+      }
   }
 }
