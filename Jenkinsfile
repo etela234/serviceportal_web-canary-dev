@@ -30,8 +30,8 @@ pipeline {
           sh 'npm build'
         }
       }
-     stage ('deploy app to node')
-    steps {
+     stage 'deploy app to node'
+ 
         ansiblePlaybook(inventory: 'home/ubuntu/playbooks/inventory.ini', playbook: 'playbooks/roles/Deploy_tomcat/tasks/main.yml')     
     
     }
