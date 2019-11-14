@@ -31,7 +31,7 @@ pipeline {
         }
       }
      stage 'deploy app to node'
-        ansiblePlaybook(inventory: 'home/ubuntu/playbooks/inventory.ini', playbook: 'home/ubuntu/playbooks/playbook.yml')     
+        ansiblePlaybook(inventory: 'home/ubuntu/playbooks/inventory.ini', playbook: 'playbooks/roles/Deploy_tomcat/tasks/main.yml')     
  
   }
 }
