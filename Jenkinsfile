@@ -6,7 +6,6 @@ pipeline {
        ansiblePlaybook(inventory: 'home/ubuntu/playbooks/inventory.ini', playbook: 'home/ubuntu/playbooks/roles/Deploy_tomcat/tasks/main.yml')     
      }
     }
-    }
 }
   
 
