@@ -18,16 +18,11 @@ pipeline {
           sh 'npm install'
         }
     }
-      stage('Run Project') {
-        steps {
-          sh "echo $PATH"
-          sh 'npm run serve'
-    }
       }
         stage('Build Project') {
         steps {
           sh "echo $PATH"
-          sh 'npm build'
+          sh 'npm run build'
         }
       }
       stage ('deploy app to node'){
