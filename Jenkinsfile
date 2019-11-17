@@ -17,7 +17,6 @@ pipeline {
           sh "echo $PATH"
           sh 'npm install'
         }
-    }
       }
         stage('Build Project') {
         steps {
